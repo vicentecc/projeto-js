@@ -28,7 +28,9 @@ function codeLatLng(lat, lng) {
             if (results[1]) {
                 //endereço completo no alert
                 //alert(results[0].formatted_address);
-                $('#EndGeoLoc').val(results[0].formatted_address);
+                var geo = results[0].formatted_address;
+                var geoT = geo.split("-");
+                $('#EndGeoLoc').val(geoT[2] + ' - ' + geoT[3]);
                 //find country name
                 for (var i = 0; i < results[0].address_components.length; i++) {
                     for (var b = 0; b < results[0].address_components[i].types.length; b++) {

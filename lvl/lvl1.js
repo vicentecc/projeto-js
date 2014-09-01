@@ -1,17 +1,23 @@
 function barraLife(t) {
     $('#life').css('width', t + '%');
     if (t == 0) {
-        alert('game over');
+        alert('GAME OVER');
+        location.reload();
     }
 }
 
 function teste(name) {
     s++;
-    $('#ponto').html('ganhou um ponto: ' + s);
+    $('#ponto').html(s);
     $('canvas').removeLayer(name);
 }
 
 function gameStart() {
+
+    setTimeout(function() {
+        alert('GAME OVER');
+        location.reload();
+    }, 10000);
 
     setTimeout(function() {
         $('#btnStart').addClass('disabled', 'disabled');
@@ -24,9 +30,9 @@ function gameStart() {
         name: 'retangulo',
         layer: true,
         bringToFront: true,
-        fillStyle: '#6c1',
+        fillStyle: 'rgba(000,000,000, 0)',
         x: 250, y: 250,
-        width: 800, height: 500,
+        width: 1000, height: 500,
         click: function() {
             t = t - 10;
             barraLife(t);
