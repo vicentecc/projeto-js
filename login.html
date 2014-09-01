@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Meteoro da mizenga</title>
+    <link href="assets/css/pgwslider.css" rel="stylesheet">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/pgwslider.js"></script>
+    <style>
+        @font-face{
+            font-family: fontedo;
+            src: url(vtc.ttf);
+        }
+        html, body {
+            font-family: fontedo;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .d-login{
+            width: 450px;
+            right: 450px;
+            text-align: center;
+            float: right;
+            margin-top: 10%;
+            margin-right: 5%;
+        }
+        input:focus {
+            outline: none;
+        }
+        input[type="text"] {
+            font-family: fontedo;
+            background-color:rgba( 255,255,255, 0.3);
+            border:1px solid #FF4000;           
+            width: 250px;
+            font-size: 30px;
+            border-radius: 5px;
+            color: #fff;
+            padding: 10px;
+        }
+        input[type="text"]:focus{
+            font-family: fontedo;
+            background-color:rgba( 255,255,255, 0.3);
+            border:1px solid #FF4000;           
+            width: 250px;
+            font-size: 30px;
+            border-radius: 5px;
+            color: #fff;
+            box-shadow: 0px 0px 35px 5px rgba(255, 96, 0, 0.66);
+            -moz-box-shadow: 0px 0px 35px 5px rgba(255, 96, 0, 0.66);
+            -webkit-box-shadow: 0px 0px 35px 5px rgba(255, 96, 0, 0.66);
+            padding: 10px;
+        }
+        input[type="email"]{
+            font-family: fontedo;
+            background-color:rgba( 255,255,255, 0.3);
+            border:1px solid #FF4000;            
+            width: 250px;
+            font-size: 30px;
+            border-radius: 5px;  
+            color: #fff;
+            padding: 10px;
+        }
+        input[type="email"]:focus{
+            font-family: fontedo;
+            background-color:rgba( 255,255,255, 0.3);
+            border:1px solid #FF4000;            
+            width: 250px;
+            font-size: 30px;
+            border-radius: 5px;  
+            color: #fff;
+            box-shadow: 0px 0px 35px 5px rgba(255, 96, 0, 0.66);
+            -moz-box-shadow: 0px 0px 35px 5px rgba(255, 96, 0, 0.66);
+            -webkit-box-shadow: 0px 0px 35px 5px rgba(255, 96, 0, 0.66);
+            padding: 10px;
+        }
+        input[type="submit"]{
+            font-family: fontedo;
+            background-color: #FF4D11;
+            width: 100px;
+            font-size: 30px;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+        }
+        input[type="submit"]:hover{
+            font-family: fontedo;
+            background-color: #FF4D11;
+            width: 100px;
+            font-size: 30px;
+            border-radius: 5px;
+            border: none;
+            -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 1);
+            -moz-box-shadow:    0px 0px 15px 5px rgba(0, 0, 0, 1);
+            box-shadow:         0px 0px 15px 5px rgba(0, 0, 0, 1);
+            color: #fff;
+        }
+        label{
+            font-size: 50px;
+            color: #fff;
+        }
+        label.error {
+            color: red;
+            font-weight: bold;
+            font-size: 18px;
+            position: absolute;
+            margin: 6px 0;
+            width: 120px;
+            text-align: center;
+        }
+        .linha-v{
+            width: 1px;
+            right: 5%;
+            background-color: #FF4000;
+            float: right;
+            margin-top: 10%;
+
+        }
+        .slide{
+            width: 700px;
+            float: left;
+            opacity: 1.0;
+            margin-top: 10%;
+            margin-left: 5%;
+            color: #fff;
+        }
+    </style>
+</head>
+<body data-vide-bg="videobg/examples/video/estrela.mp4">
+
+ <div class="container-fluid">
+    <!-- Formilário de login-->
+    <div class="d-login">
+        <form id="formulario" action="index.html">
+            <label for="">Login</label><br><br>
+            <input type="email" placeholder="E-mail" name="email"><br><br><br>
+            <input type="text" placeholder="Nickname" name="nome"><br><br><br>
+            <input type="submit" value="!Go">
+        </form>
+    </div>
+
+    <!-- linha do centro-->
+    <div class="linha-v">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <!-- slide -->
+    <div class="slide">
+        <ul class="pgwSlider">
+            <li>
+                <img src="assets/img/paris.jpg" alt="Paris, France" data-description="Coloca a descrição aqui">
+            </li>
+            <li>
+                <img src="assets/img/montreal.jpg" alt="Montréal, QC, Canada" data-description="Coloca a descrição aqui">
+            </li>
+            <li>
+                <img src="assets/img/shanghai.jpg" alt="Shanghai, China"data-description="Coloca a descrição aqui">
+            </li>
+            <li>
+                <img src="assets/img/new-york.jpg" alt="New York, NY, USA"data-description="Coloca a descrição aqui">
+            </li>
+        </ul>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.pgwSlider').pgwSlider();
+            });
+        </script>
+
+    </div>
+</div>
+
+
+<!-- scripts do video de fundo -->
+<script>window.jQuery || document.write('<script src="videobg/libs/jquery/jquery-1.11.1.min.js"><\/script>')</script>
+<script src="videobg/src/jquery.vide.js"></script>
+<script src="assets/js/jquery.validate.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#formulario').validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                 nome: {
+                    required: true,
+                    minlength: 3
+                },
+            },
+            messages: {
+                nome: {
+                    required: "O campo nome é obrigatório.",
+                    minlength: "O campo nome deve conter no mínimo 3 caracteres."
+                },
+                email: {
+                    required: "O campo email é obrigatório.",
+                    email: "O campo email deve conter um email válido."
+                },
+            }
+ 
+        });
+    });
+</script>
+</body>
+</html>
